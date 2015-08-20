@@ -9,7 +9,9 @@ export CMD=${CMD:-""}
 export DBUSER=${DBUSER:-"someuser"}
 export DBPASS=${DBPASS:-"somepass"}
 export DBHOST=${DBHOST:-"somehost"}
+export REDIS=${REDIS:-"somehost"}
 export GITKEY=${GITKEY:-"somekey"}
+
 
 
 
@@ -29,15 +31,11 @@ case "$APP" in
     exit 1
 esac
 
-if [ ! -f /var/www/html/sites/default/settings.php ]; then
-	cd /var/www/html
-  #GIT CLONE
-  #MAKE STUFF WORK FOR APPX
 
-	sleep 3s
-else
+echo "$GITKEY" > /root/gitkey
+GIT_SSH_COMMAND="ssh -i /root/gitkey -F /dev/null" git clone $REPO /var/www/html
 
-fi
+
 
 echo
 echo "--------------------------STARTING SERVICES-----------------------------------"
