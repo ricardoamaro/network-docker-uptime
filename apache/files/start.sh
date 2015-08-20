@@ -32,14 +32,10 @@ esac
 
 cd /var/www
 [ -e /var/www/html ] && rm -r /var/www/html
-echo "$GIT_KEY" > /root/gitkey
 
-GIT_SSH_COMMAND="ssh -i /root/gitkey -F /dev/null" git clone $REPO /var/www/html
-R=$?
-if [ $R != 0 ]; then
-    echo "Git failed to clone $REPO" 1>&2
-    exit $R
-fi
+echo "$GITKEY" > /root/gitkey
+chmod 600 /root/gitkey
+git clone $REPO /var/www/html
 
 echo
 echo "--------------------------STARTING SERVICES-----------------------------------"

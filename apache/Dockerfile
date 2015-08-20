@@ -25,6 +25,11 @@ RUN a2ensite 000-default ; a2enmod rewrite vhost_alias
 # Display version information
 RUN php --version
 
+# Install config
+mkdir /root/.ssh
+COPY ./files/config /root/.ssh/config
+RUN chmod -r 600 /root/.ssh
+
 RUN chmod 755 /start.sh /etc/apache2/foreground.sh
 WORKDIR /var/www/html
 EXPOSE 80
