@@ -1,4 +1,4 @@
-FROM ricardoamaro/uptime-base
+FROM ricardoamaro/uptime-base:latest
 
 MAINTAINER Ricardo Amaro <ricardo.amaro_at_acquia.com>
 ENV DEBIAN_FRONTEND noninteractive
