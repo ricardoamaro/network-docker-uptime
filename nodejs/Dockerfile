@@ -24,8 +24,13 @@ RUN \
   npm install -g npm && \
   printf '\n# Node.js\nexport PATH="node_modules/.bin:$PATH"' >> /root/.bashrc
 
+# Install start
+COPY ./files/start.sh /start.sh
+RUN chmod 755 /start.sh
+
 # Define working directory.
 WORKDIR /data
 
+EXPOSE 80
 # Define default command.
-CMD ["/bin/bash"]
+CMD ["/bin/bash", "/start.sh"]
