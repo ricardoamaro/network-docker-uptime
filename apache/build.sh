@@ -11,5 +11,5 @@ then
   fi
 fi
 
-docker build -t ricardaoamaro/uptime-apache --rm=true .
+docker build -t ricardoamaro/uptime-apache --rm=true .
 

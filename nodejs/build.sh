@@ -11,5 +11,5 @@ then
   fi
 fi
 
-docker build -t ricardaoamaro/uptime-nodejs --rm=true .
+docker build -t ricardoamaro/uptime-nodejs --rm=true .
 

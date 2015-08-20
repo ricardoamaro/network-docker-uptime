@@ -11,5 +11,5 @@ then
   fi
 fi
 
-docker build -t ricardaoamaro/uptime-base --rm=true .
+docker build -t ricardoamaro/uptime-base --rm=true .
 

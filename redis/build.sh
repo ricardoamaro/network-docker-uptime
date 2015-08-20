@@ -11,5 +11,5 @@ then
   fi
 fi
 
-docker build -t ricardaoamaro/uptime-redis --rm=true .
+docker build -t ricardoamaro/uptime-redis --rm=true .
 
