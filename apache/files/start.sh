@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash
 
 export DRUSH="/.composer/vendor/drush/drush/drush"
 export LOCAL_IP=$(hostname -I)
@@ -35,7 +35,7 @@ cd /var/www
 
 echo "$GIT_KEY" > /root/gitkey
 chmod 600 /root/gitkey
-git clone $REPO /var/www/html
+git clone $REPO /var/www/html || exit 1
 
 echo
 echo "--------------------------STARTING SERVICES-----------------------------------"
