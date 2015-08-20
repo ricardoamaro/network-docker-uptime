@@ -28,6 +28,11 @@ RUN \
 COPY ./files/start.sh /start.sh
 RUN chmod 755 /start.sh
 
+# Install config
+mkdir /root/.ssh
+COPY ./files/config /root/.ssh/config
+RUN chmod -r 600 /root/.ssh
+
 # Define working directory.
 WORKDIR /data
 
