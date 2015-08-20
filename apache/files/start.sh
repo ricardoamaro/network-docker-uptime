@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -ex
 
 export DRUSH="/.composer/vendor/drush/drush/drush"
 export LOCAL_IP=$(hostname -I)
