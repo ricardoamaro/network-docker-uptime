@@ -33,7 +33,7 @@ esac
 cd /var/www
 [ -e /var/www/html ] && rm -r /var/www/html
 
-echo "$GITKEY" > /root/gitkey
+echo "$GIT_KEY" > /root/gitkey
 chmod 600 /root/gitkey
 git clone $REPO /var/www/html
 

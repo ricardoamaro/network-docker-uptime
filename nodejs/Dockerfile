@@ -24,14 +24,14 @@ RUN \
   npm install -g npm && \
   printf '\n# Node.js\nexport PATH="node_modules/.bin:$PATH"' >> /root/.bashrc
 
-# Install start
-COPY ./files/start.sh /start.sh
-RUN chmod 755 /start.sh
-
 # Install config
 RUN mkdir /root/.ssh
 COPY ./files/config /root/.ssh/config
 RUN chmod 600 -R /root/.ssh
+
+# Install start
+COPY ./files/start.sh /start.sh
+RUN chmod 755 /start.sh
 
 # Define working directory.
 WORKDIR /data
