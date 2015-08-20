@@ -3,6 +3,12 @@ FROM ricardoamaro/uptime-base:latest
 MAINTAINER Ricardo Amaro <ricardo.amaro_at_acquia.com>
 ENV DEBIAN_FRONTEND noninteractive
 
+# Install Python
+RUN \
+  apt-get update && \
+  apt-get install -y python python-dev python-pip python-virtualenv && \
+  rm -rf /var/lib/apt/lists/*
+
 # Install Node.js
 RUN \
   cd /tmp && \
