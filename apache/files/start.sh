@@ -1,6 +1,5 @@
 #!/bin/bash
 
-export DRUSH="/.composer/vendor/drush/drush/drush"
 export LOCAL_IP=$(hostname -I)
 export IDENTIFIER=${IDENTIFIER:-"build_$(date +%Y_%m_%d_%H%M%S)"}
 export APP=${APP:-"api"}
@@ -31,7 +30,7 @@ case "$APP" in
 esac
 
 cd /var/www
-[ -e /var/www/html ] && rm -r /var/www/html
+rm -rf /var/www/html/*
 
 echo "$GIT_KEY" > /root/gitkey
 chmod 600 /root/gitkey

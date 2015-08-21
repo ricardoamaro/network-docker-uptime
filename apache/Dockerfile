@@ -31,6 +31,6 @@ COPY ./files/config /root/.ssh/config
 RUN chmod 600 -R /root/.ssh
 
 RUN chmod 755 /start.sh /etc/apache2/foreground.sh
-WORKDIR /var/www/html
+WORKDIR /var/www
 EXPOSE 80
 CMD ["/bin/bash", "/start.sh"]
