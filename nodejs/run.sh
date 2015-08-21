@@ -11,7 +11,7 @@ then
   fi
 fi
 
-TAG="ricardoamaro/nodejs"
+TAG="ricardoamaro/uptime-nodejs"
 
 docker run --rm -i -t \
   -e "GIT_KEY=$(cat ~/keys/scanner)" \

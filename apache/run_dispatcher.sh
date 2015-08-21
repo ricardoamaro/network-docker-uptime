@@ -11,7 +11,7 @@ then
   fi
 fi
 
-TAG="ricardoamaro/apache"
+TAG="ricardoamaro/uptime-apache"
 APP="dispatcher"
 
 docker run --rm -i -t \
