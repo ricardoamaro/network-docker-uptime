@@ -38,6 +38,6 @@ git clone $REPO /var/www/html || exit 1
 
 echo
 echo "--------------------------STARTING SERVICES-----------------------------------"
-echo "USE CTRL+C TO STOP THIS APP"
+echo "USE CTRL+C TO STOP THIS APP ( $APP ) http://${LOCAL_IP} "
 echo "------------------------------------------------------------------------------"
 supervisord -n -c /etc/supervisor/conf.d/supervisord.conf
