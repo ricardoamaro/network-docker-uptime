@@ -12,13 +12,13 @@ then
 fi
 
 TAG="ricardoamaro/apache"
-APP="dispatcher"
+APP="processor"
 
 docker run --rm -i  \
+  -e "GIT_KEY=$(cat ~/keys/${APP})" \
 	-e "APP=$APP" \
 	-e "REDIS_HOST=" \
 	-e "REDIS_PORT=" \
 	-e "AUTH_USER=" \
 	-e "AUTH_PASS=" \
 	${TAG}
-
