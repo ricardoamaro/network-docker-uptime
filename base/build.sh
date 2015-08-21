@@ -12,4 +12,3 @@ then
 fi
 
 docker build -t ricardoamaro/uptime-base --rm=true .
-

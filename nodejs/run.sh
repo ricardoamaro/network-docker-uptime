@@ -15,8 +15,8 @@ TAG="ricardoamaro/uptime-nodejs"
 
 docker run --rm -i -t \
   -e "GIT_KEY=$(cat ~/keys/scanner)" \
-	-e "REDIS_HOST=" \
-	-e "REDIS_PORT=" \
-	-e "AUTH_USER=" \
-	-e "AUTH_PASS=" \
+  -e "DISPATCHER_IP=" \
+  -e "DISPATCHER_PORT=80" \
+  -e "PROCESSOR_IP=" \
+  -e "PROCESSOR_PORT="80" \
 	${TAG}

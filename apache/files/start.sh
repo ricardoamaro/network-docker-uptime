@@ -9,6 +9,9 @@ export DBPASS=${DBPASS:-"somepass"}
 export DBHOST=${DBHOST:-"somehost"}
 export REDIS=${REDIS:-"somehost"}
 export GIT_KEY=${GIT_KEY:-"somekey"}
+export AUTH_USER=${AUTH_USER:-"someuser"}
+export AUTH_PASS=${AUTH_PASS:-"somepass"}
+
 
 REPO_BASE="git@github.com:acquia"
 case "$APP" in
