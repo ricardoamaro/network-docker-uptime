@@ -22,7 +22,7 @@ case "$APP" in
     ;;
 
   dispatcher)
-    REPO="$REPO_BASE/network-uptime-dispatchr.git"
+    REPO="$REPO_BASE/network-uptime-dispatcher.git"
     ;;
 
   *)
