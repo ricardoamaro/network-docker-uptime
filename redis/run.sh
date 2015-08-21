@@ -11,7 +11,7 @@ then
   fi
 fi
 
-TAG="ricardoamaro/redis"
+TAG="ricardoamaro/uptime-redis"
 
 docker run --rm -i -t \
 	-e "REDIS_HOST=" \
