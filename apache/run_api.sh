@@ -15,7 +15,7 @@ TAG="ricardoamaro/uptime-apache"
 APP="api"
 
 docker run --rm -i -t  \
-        -e "GIT_KEY=$(cat ~/keys/${APP})" \
+  -e "GIT_KEY=$(cat ~/keys/${APP})" \
 	-e "APP=$APP" \
 	-e "REDIS_HOST=" \
 	-e "REDIS_PORT=" \
